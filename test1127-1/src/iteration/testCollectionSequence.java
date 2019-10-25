@@ -2,7 +2,6 @@ package iteration;
 import java.util.*;
 import testclass.*;
 import static lzp.tools.*;
-
 public class testCollectionSequence extends AbstractCollection<TestPet1> {
 	
 	private TestPet1[] pets = TestPet1.createArray(8);

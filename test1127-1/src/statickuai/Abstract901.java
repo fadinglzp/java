@@ -1,6 +1,5 @@
 package statickuai;
 import static lzp.tools.*;
-
 abstract class fun1{
 //	abstract void f1();
 	void f2(){print("fun1");};

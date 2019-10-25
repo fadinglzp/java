@@ -1,8 +1,7 @@
 package inheriting;
-import static lzp.tools.*;
 import java.util.logging.*;
 import java.io.*;
-
+import static lzp.tools.*;
 
 public class LoggingException2 {
 	private static Logger logger=Logger.getLogger("LoggingException2");

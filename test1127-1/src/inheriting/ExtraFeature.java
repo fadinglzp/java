@@ -1,6 +1,5 @@
 package inheriting;
-import  static lzp.tools.*;
-
+import static lzp.tools.*;
 class MyException2 extends Exception{
 	private int x;
 	public MyException2(){}
@@ -29,6 +28,7 @@ public class ExtraFeature {
 		throw new MyException2("Originated in h()",42);
 		
 	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

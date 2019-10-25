@@ -1,6 +1,5 @@
 package statickuai;
 import static lzp.tools.*;
-
 class Inner{
 	public class A{
 		int i=1;

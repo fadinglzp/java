@@ -1,4 +1,5 @@
 package lzp;
+
 import java.util.LinkedList;
 
 public class Stack<T> {

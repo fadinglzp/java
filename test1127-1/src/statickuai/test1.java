@@ -1,8 +1,5 @@
 package statickuai;
-import static  lzp.tools.*;
-
-
-
+import static lzp.tools.*;
 class Cup{
 	int i;
 	Cup(int i){

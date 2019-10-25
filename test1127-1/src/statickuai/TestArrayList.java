@@ -1,6 +1,6 @@
 package statickuai;
-import static lzp.tools.*;
 import java.util.*;
+import static lzp.tools.*;
 interface TestArrayListA{
 	void funa();
 };

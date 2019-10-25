@@ -1,7 +1,5 @@
 package inheriting;
 import static lzp.tools.*;
-
-
 public class ExceptionMethods {
 
 	public static void main(String[] args) {

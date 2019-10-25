@@ -1,7 +1,6 @@
 package iteration;
 import java.util.*;
 import static lzp.tools.*;
-
 public class TestSet {
 
 	public static void main(String[] args) {

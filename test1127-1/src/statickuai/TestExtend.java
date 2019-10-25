@@ -1,6 +1,5 @@
 package statickuai;
 import static lzp.tools.*;
-
 class BaseExtend{
 	void fun(){
 		print("BaseExtend");

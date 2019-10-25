@@ -1,5 +1,4 @@
 package iteration;
-import static lzp.tools.*;
 import java.util.*;
 import testclass.*;
 

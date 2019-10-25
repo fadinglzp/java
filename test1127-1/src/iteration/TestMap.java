@@ -1,9 +1,8 @@
 package iteration;
 import java.util.*;
+import static lzp.tools.*;
 
 import testclass.Apple;
-
-import static lzp.tools.*;
 public class TestMap {
 	public static void main (String[] args){
 		Map<String,Apple> appleMap=new HashMap<String,Apple>();

@@ -1,5 +1,4 @@
 package statickuai;
-
 import static lzp.tools.*;
 class TestDuotaiA{
 	void fun2()

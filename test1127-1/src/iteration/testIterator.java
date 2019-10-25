@@ -1,6 +1,6 @@
 package iteration;
-import static lzp.tools.*;
 import java.util.*;
+import static lzp.tools.*;
 import testclass.*;
 //interface TestArrayListA{
 //	void funa();
