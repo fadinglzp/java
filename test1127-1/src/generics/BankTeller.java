@@ -1,6 +1,6 @@
 package generics;
 import java.util.*;
-import lz
+import lzp.*;
 import static lzp.tools.*;
 
 class Customer {
