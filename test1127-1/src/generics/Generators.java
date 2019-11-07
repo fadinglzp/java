@@ -19,11 +19,9 @@ public class Generators {
 		for(Coffee c: coffee)
 			print(c);
 		Collection<Integer> fnumbers =
-				fill(new  ArrayList<Integer>(),new Fibonacci(),12);
+				fill(new ArrayList<Integer>(),new Fibonacci(),12);
 		for(int i : fnumbers)
-			printl(i+" . ");
+			printl(i+" ");
 	}
-	
-	
 
 }
