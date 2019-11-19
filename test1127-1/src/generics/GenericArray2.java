@@ -28,6 +28,7 @@ public class GenericArray2<T> {
 	//	print(gai.rep().getClass());
 		Object[] obj = gai.rep();
 		print(obj.getClass());
+		print(obj);
 	}
 
 }

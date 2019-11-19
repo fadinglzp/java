@@ -25,7 +25,6 @@ class SuperSleuth<POWER extends XRayVision> extends SuperHero<POWER>{
 
 	SuperSleuth(POWER power) {
 		super(power);
-		// TODO Auto-generated constructor stub
 	}
 	void see(){
 		power.seeThrouhWalls();
@@ -84,23 +83,13 @@ public class EpicBattle {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DogBoy dogboy = new DogBoy();
+		SuperHearSmell ss=new SuperHearSmell();
 		useSuperHearing(dogboy);
 		superFind(dogboy);
-		List<? extends SuperHearing> audioBoys;
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		List<? extends SuperHearing> audioBoys =new ArrayList<>();
+		List<? extends SuperHearSmell> ssboy;
+	//	audioBoys.add(ss);
+
 		
 	}
 
