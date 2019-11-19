@@ -86,10 +86,10 @@ class UseList<W, T> {
 	}
 }
 
-interface Comparable<T> {
-	public int compareTo(T t);
-
-}
+//interface Comparable<T> {
+//	public int compareTo(T t);
+//
+//}
 
 class ComparablePet<T> implements Comparable<ComparablePet<T>> {
 //	public int compareTo(T arg) {
