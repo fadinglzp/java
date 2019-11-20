@@ -114,61 +114,63 @@ class AddableCollectionAdapter<T> implements Addable<T> {
 	public AddableCollectionAdapter(Collection<T> c) {
 		this.c = c;
 	}
+
 	public void add(T item) {
 		c.add(item);
 	}
 }
-class AddableSimpleQueue<T>	extends SimpleQueue<T> implements Addable<T>{
+
+class AddableSimpleQueue<T> extends SimpleQueue<T> implements Addable<T> {
 	public void add(T item) {
 		super.add(item);
 	}
 }
 
-class Adapter{
-	public static <T> Addable<T> collectionAdapter(Collection<T> c){
+class Adapter {
+	public static <T> Addable<T> collectionAdapter(Collection<T> c) {
 		return new AddableCollectionAdapter<T>(c);
 	}
 }
-
 
 class ApplyTest {
 	public static void main(String[] args) throws Exception {
 
 		List<Coffee> carrier = new ArrayList<Coffee>();
-		Fill2.fill(new AddableCollectionAdapter<Coffee>(carrier),Coffee.class,3);
+		Fill2.fill(new AddableCollectionAdapter<Coffee>(carrier), Coffee.class, 3);
 		Fill2.fill(Adapter.collectionAdapter(carrier), Latte.class, 2);
 		print(carrier);
-		AddableSimpleQueue<Coffee> coffeeQueue=new AddableSimpleQueue<Coffee>();
+		AddableSimpleQueue<Coffee> coffeeQueue = new AddableSimpleQueue<Coffee>();
 		Fill2.fill(coffeeQueue, Mocha.class, 4);
 		Fill2.fill(coffeeQueue, Latte.class, 1);
-		for(Coffee c: coffeeQueue)
+		for (Coffee c : coffeeQueue)
 			print(c);
 
-
 		/*
-		 * List<Contract> contracts=new ArrayList<Contract>(); Fill.fill(contracts,
-		 * Contract.class, 3); Fill.fill(contracts, TitleTransfer.class, 2);
-		 * print(contracts); SimpleQueue<Contract> contractQueue=new
-		 * SimpleQueue<Contract>(); // Fill.fill(contractQueue, Contract.class, 3);
+		 * List<Contract> contracts=new ArrayList<Contract>();
+		 * Fill.fill(contracts, Contract.class, 3); Fill.fill(contracts,
+		 * TitleTransfer.class, 2); print(contracts); SimpleQueue<Contract>
+		 * contractQueue=new SimpleQueue<Contract>(); //
+		 * Fill.fill(contractQueue, Contract.class, 3);
 		 */
 
 		/*
-		 * List<Shape> shapes = new ArrayList<Shape>(); for (int i = 0; i < 10; i++)
-		 * shapes.add(new Shape()); Apply.apply(shapes,
+		 * List<Shape> shapes = new ArrayList<Shape>(); for (int i = 0; i < 10;
+		 * i++) shapes.add(new Shape()); Apply.apply(shapes,
 		 * Shape.class.getMethod("rotate")); Apply.apply(shapes,
-		 * Shape.class.getMethod("resize", int.class), 5); List<Square> squares = new
-		 * ArrayList<Square>(); for (int i = 0; i < 10; i++) { squares.add(new
-		 * Square()); } Apply.apply(squares, Shape.class.getMethod("rotate"));
-		 * Apply.apply(squares, Shape.class.getMethod("resize", int.class), 5);
+		 * Shape.class.getMethod("resize", int.class), 5); List<Square> squares
+		 * = new ArrayList<Square>(); for (int i = 0; i < 10; i++) {
+		 * squares.add(new Square()); } Apply.apply(squares,
+		 * Shape.class.getMethod("rotate")); Apply.apply(squares,
+		 * Shape.class.getMethod("resize", int.class), 5);
 		 * 
 		 * Apply.apply(new FilledList<Shape>(Shape.class, 10),
 		 * Shape.class.getMethod("rotate")); Apply.apply(new
-		 * FilledList<Square>(Square.class, 10), Square.class.getMethod("resize",
-		 * int.class), 10);
+		 * FilledList<Square>(Square.class, 10),
+		 * Square.class.getMethod("resize", int.class), 10);
 		 * 
-		 * Queue<Shape> shapeQ = new LinkedList<Shape>(); for (int i = 0; i < 5; i++) {
-		 * shapeQ.add(new Shape()); shapeQ.add(new Square()); } Apply.apply(shapeQ,
-		 * Shape.class.getMethod("rotate"));
+		 * Queue<Shape> shapeQ = new LinkedList<Shape>(); for (int i = 0; i < 5;
+		 * i++) { shapeQ.add(new Shape()); shapeQ.add(new Square()); }
+		 * Apply.apply(shapeQ, Shape.class.getMethod("rotate"));
 		 */
 	}
 }
