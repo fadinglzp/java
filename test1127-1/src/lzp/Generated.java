@@ -12,10 +12,4 @@ public class Generated {
 
 }
 
-class CollectionData<T> extends ArrayList<T>{
-	
-	public CollectionData(Generator<T>gen,int size){
-		for(;size-->0;)
-			add(gen.next());
-	}
-}
+
