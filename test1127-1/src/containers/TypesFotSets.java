@@ -68,21 +68,17 @@ public class TypesFotSets {
 		// } catch (Exception e1) {
 		// e1.printStackTrace();
 		// }
-		
-		
-		LinkedHashMap<Integer,String> linkedMap=new LinkedHashMap<Integer,String>(new CountingMapData(9));
+
+		LinkedHashMap<Integer, String> linkedMap = new LinkedHashMap<Integer, String>(new CountingMapData(9));
 		print(linkedMap);
-		linkedMap=new LinkedHashMap<Integer,String>(16,0.75f,true);
+		linkedMap = new LinkedHashMap<Integer, String>(16, 0.75f, true);
 		linkedMap.putAll(new CountingMapData(9));
 		print(linkedMap);
-		for(int i=0;i<6;i++)
+		for (int i = 0; i < 6; i++)
 			linkedMap.get(i);
 		print(linkedMap);
 		linkedMap.get(0);
 		print(linkedMap);
-		
-		
-		
 
 		SortedSet<String> sortedSet = new TreeSet<String>();
 		Collections.addAll(sortedSet, "one two three four five six seven eight".split(" "));
