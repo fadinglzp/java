@@ -4,8 +4,8 @@ import java.util.*;
 import static lzp.tools.*;
 
 public class Countries {
-	public static final String[][] DATA = { { "A", "a" }, { "C", "c" }, { "B", "b" }, { "E", "e" }, { "D", "d" },
-			{ "F", "f" }, { "G", "g" }, { "1", "11" }, { "2", "22" }, { "3", "33" }, { "4", "44" }, { "5", "55" } };
+	public static final String[][] DATA = { { "Adasfa", "a" }, { "Afhdrt", "c" }, { "Aghjffu", "b" }, { "Artydhfg", "e" }, { "Aergfhstr", "d" },
+			{ "Aresfhre", "f" }, { "Atydfghdty", "g" }, { "Agfhdgfhdgf", "11" }, { "Afghfdh", "22" }, { "3", "33" }, { "4", "44" }, { "5", "55" } };
 
 	private static class FlyweightMap extends AbstractMap<String, String> {
 		private static class Entry implements Map.Entry<String, String> {
@@ -114,21 +114,22 @@ public class Countries {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// print(capitals(10));
-		// print(names(10));
-		// print(new HashMap<String, String>(capitals(3)));
-		// print(new LinkedHashMap<String, String>(capitals(3)));
-		// print(new TreeMap<String, String>(capitals(3)));
-		// print(new Hashtable<String, String>(capitals(3)));
-		// print(new HashSet<String>(names(6)));
-		// print(new LinkedHashSet<String>(names(6)));
-		// print(new TreeSet<String>(names(6)));
-		// print(new ArrayList<String>(names(6)));
-		// print(new LinkedList<String>(names(6)));
-		// print(capitals().get("2"));
+	//	 print(capitals(10));
+	//	 print(names(10));
+		 print(new HashMap<String, String>(capitals(6)));
+		 print(new LinkedHashMap<String, String>(capitals(6)));
+		 print(new TreeMap<String, String>(capitals(6)));
+		 print(new Hashtable<String, String>(capitals(6)));
+		 print(new Hashtable<String, String>(capitals(3)));
+		 print(new HashSet<String>(names(6)));
+		 print(new LinkedHashSet<String>(names(6)));
+		 print(new TreeSet<String>(names(6)));
+		 print(new ArrayList<String>(names(6)));
+		 print(new LinkedList<String>(names(6)));
+		 print(capitals().get("2"));
 
 	//	print(new CountingIntegerList(30));
-		print(new CountingMapData(60));
+	//	print(new CountingMapData(60));
 
 	}
 

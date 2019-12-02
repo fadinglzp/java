@@ -60,7 +60,7 @@ public class ArrayOptions {
 		List[] l = new ArrayList[10];
 		List<String>[] ls = (List<String>[]) l;
 		// ls[1]=new ArrayList<Integer>();
-		// ArrayList<String>[] ls= new ArrayList<String>[10];
+	// ArrayList<String>[] ls= new ArrayList<String>[10];
 		l[0] = new ArrayList<String>();
 		l[1] = new ArrayList<Integer>();
 		Object[] objects = ls;
