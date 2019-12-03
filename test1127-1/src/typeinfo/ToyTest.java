@@ -69,6 +69,8 @@ public class ToyTest {
 		tc.count(new FancyToy());
 		tc.count(new Toy3());
 		print(tc);
+		
+		
 	}
 	
 

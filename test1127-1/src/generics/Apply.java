@@ -5,6 +5,7 @@ import java.util.*;
 
 import lzp.Generator;
 
+
 import static lzp.tools.*;
 
 public class Apply {
@@ -144,7 +145,7 @@ class ApplyTest {
 		Fill2.fill(coffeeQueue, Latte.class, 1);
 		for (Coffee c : coffeeQueue)
 			print(c);
-
+		
 		/*
 		 * List<Contract> contracts=new ArrayList<Contract>();
 		 * Fill.fill(contracts, Contract.class, 3); Fill.fill(contracts,
