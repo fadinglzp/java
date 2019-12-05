@@ -52,7 +52,7 @@ public class TestParam {
 
 class Tester<T> {
 	public static int fieldWidth = 8;
-	public static TestParam[] defaultParams = TestParam.array(10, 5000, 100, 5000, 1000, 5000, 10000, 500);
+	public static TestParam[] defaultParams = TestParam.array(10, 5000, 100, 5000, 1000, 5000, 10000, 500,100000,500);
 	protected T container;
 
 	protected T initialize(int size) {
