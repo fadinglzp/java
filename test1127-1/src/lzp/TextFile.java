@@ -1,17 +1,19 @@
 package lzp;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
+import static lzp.tools.*;
 public class TextFile {
-//	private String s = "";
-//	private BufferedReader in;
-//
-//	public String toString() {
-//		return s;
-//	}
+	private static String s = "";
+	private BufferedReader in;
+
+	public String toString() {
+		return s;
+	}
 
 	public static String read(String filename) {
 		String sr = "";
-		BufferedReader in;
+		BufferedReader in = null;
 		try {
 			in = new BufferedReader(new FileReader(filename));
 			String tmp;
@@ -20,18 +22,18 @@ public class TextFile {
 			in.close();
 		} catch (Exception e) {
 			e.printStackTrace(System.err);
-			// s="";
-			// try {
-			// in.close();
-			// } catch (IOException e2) {
-			// print("in.close() unsuccessful");
-			// }
+			 s="";
+			 try {
+			 in.close();
+			 } catch (IOException e2) {
+			 print("in.close() unsuccessful");
+			 }
 		}
 		return sr;
 	}
 
 	public TextFile(String filename) {
-/*
+
 		try {
 			in = new BufferedReader(new FileReader(filename));
 			String tmp;
@@ -39,18 +41,18 @@ public class TextFile {
 				s += tmp;
 			in.close();
 		} catch (Exception e) {
-			// s="";
+			s = "";
 
 			e.printStackTrace(System.err);
-			// try {
-			// in.close();
-			// } catch (IOException e2) {
-			// print("in.close() unsuccessful");
-			// }
+			 try {
+			 in.close();
+			 } catch (IOException e2) {
+			 print("in.close() unsuccessful");
+			 }
 		} finally {
 
 		}
-*/
+
 	}
 
 	public static void main(String[] args) {

@@ -6,8 +6,8 @@ import static enumerated.Input.*;
 import static lzp.tools.*;
 
 enum Category {
-	MONEY(NICKEL, DIME, QUARTER, DOLLAR), ITEM_SELECTION(TOOTHPASTE, CHIPS, SODA,
-			SOAP), QUIT_TRANSACTION(ABORT_TRANSACTION), SHUT_DOWN(STOP);
+	MONEY(NICKEL, DIME, QUARTER, DOLLAR), ITEM_SELECTION(TOOTHPASTE, CHIPS, SODA, SOAP),
+	QUIT_TRANSACTION(ABORT_TRANSACTION), SHUT_DOWN(STOP);
 	private Input[] values;
 
 	Category(Input... types) {
@@ -70,23 +70,23 @@ public class VendingMachine {
 			}
 		},
 		DISPENSING(StateDuration.TRANSIENT) {
-			void next(){
-				print("here is your "+ selection);
-				amount-=selection.amount();
-				state=GIVING_CHANGE;
+			void next() {
+				print("here is your " + selection);
+				amount -= selection.amount();
+				state = GIVING_CHANGE;
 			}
 		},
 		GIVING_CHANGE(StateDuration.TRANSIENT) {
-			void next(){
-				if(amount>0){
-					print("Your change: "+amount);
-					amount=0;
+			void next() {
+				if (amount > 0) {
+					print("Your change: " + amount);
+					amount = 0;
 				}
-				state=RESTING;
+				state = RESTING;
 			}
 		},
 		TERMINAL {
-			void output(){
+			void output() {
 				print("Halted");
 			}
 		};
@@ -106,7 +106,8 @@ public class VendingMachine {
 		void next() {
 			throw new RuntimeException("Only call next() for StateDuration.TRANSIENT states");
 		}
-		void output(){
+
+		void output() {
 			print(amount);
 		}
 	}
@@ -114,69 +115,42 @@ public class VendingMachine {
 	private static State state = State.RESTING;
 	private static int amount = 0;
 	private static Input selection = null;
-	static void run(Generator<Input> gen){
-		while(state!=State.TERMINAL){
+
+	static void run(Generator<Input> gen) {
+		while (state != State.TERMINAL) {
 			state.next(gen.next());
-			while(state.isTransient)
+			while (state.isTransient)
 				state.next();
 			state.output();
 		}
 	}
-	public static void main(String[] args){
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+	public static void main(String[] args) {
+		Generator<Input> gen = new RandomInputGenerator();
+		if (args.length == 1)
+			gen = new FileInputGenerator(args[0]);
+		run(gen);
+
 	}
 
 }
 
-
-class RandomInputGenerator implements Generator<Input>{
-	public Input next(){
+class RandomInputGenerator implements Generator<Input> {
+	public Input next() {
 		return Input.randomSelection();
 	}
 }
- 
-class FileInputGenerator implements Generator<Input>{
+
+class FileInputGenerator implements Generator<Input> {
 	private Iterator<String> input;
-	public FileInputGenerator(String fileName){
-	//	input=new TextFile(fileName,";")fileName;
+
+	public FileInputGenerator(String fileName) {
+	//	 input=new TextFile(fileName,";");
 	}
-	public Input next(){
-		if(!input.hasNext())
+
+	public Input next() {
+		if (!input.hasNext())
 			return null;
-		return Enum.valueOf(Input.class,input.next().trim());
+		return Enum.valueOf(Input.class, input.next().trim());
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
