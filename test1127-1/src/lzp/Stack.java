@@ -8,7 +8,7 @@ public class Stack<T> {
 	public T peek(T v){
 		return storage.getFirst();
 	}
-	public T pop(T v){
+	public T pop(){
 		return storage.removeFirst();
 	}
 	public boolean empty(){
