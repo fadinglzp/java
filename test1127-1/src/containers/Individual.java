@@ -51,6 +51,7 @@ public class Individual implements Comparable<Individual> {
 	}
 	public void main(String[] args){
 		Set<Individual> pets =new TreeSet<Individual>();
+		
 	//	pets.add(e);
 	}
 }
