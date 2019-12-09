@@ -1,0 +1,19 @@
+1: package io;
+2: import java.io.*;
+3: 
+4: public class BasicFileOutput {
+5: 	static String file="src/io/BasicFileOutput.out";
+6: 	public static void main(String[] args) throws IOException {
+7: 		// TODO Auto-generated method stub
+8: 		BufferedReader in=new BufferedReader(
+9: 				new StringReader(BufferedInputFile.read("src/io/BasicFileOutput.java")));
+10: 		PrintWriter out =new PrintWriter(new BufferedWriter(new FileWriter(file)));
+11: 		int lineCount=1;
+12: 		String s;
+13: 		while((s=in.readLine())!=null)
+14: 			out.println(lineCount++ +": "+s);
+15: 		out.close();
+16: 		System.out.println(BufferedInputFile.read(file));
+17: 	}
+18: 
+19: }
